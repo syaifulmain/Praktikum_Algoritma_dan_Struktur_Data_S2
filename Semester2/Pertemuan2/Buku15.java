@@ -10,15 +10,15 @@ public class Buku15 {
         System.out.println("Harga: Rp " + harga);
     }
 
-    void terjual (int jumlah) {
-        stok = stok - jumlah;
+    void terjual (int jml) {
+        stok -= jml;
     }
 
-    void restok (int jumlah) {
-        stok = stok + jumlah;
+    void restok (int jml) {
+        stok += jml;
     }
 
-    void gantiHarga (int hargaBaru) {
-        harga = hargaBaru;
+    void gantiHarga (int hrg) {
+        harga = hrg;
     }
 }
