@@ -2,6 +2,18 @@ public class Buku15 {
     String judul, pengarang;
     int halaman, stok, harga;
 
+    Buku15 () {
+
+    }
+
+    public Buku15(String judul, String pengarang, int halaman, int stok, int harga) {
+        this.judul = judul;
+        this.pengarang = pengarang;
+        this.halaman = halaman;
+        this.stok = stok;
+        this.harga = harga;
+    }
+
     void tampilInformasi() {
         System.out.println("Judul: " + judul);
         System.out.println("Pengarang: " + pengarang);
