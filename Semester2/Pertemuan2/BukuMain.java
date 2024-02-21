@@ -16,5 +16,12 @@ public class BukuMain {
         Buku15 buku2 = new Buku15("Self Reward","Maheera", 160, 29, 59000);
         buku2.terjual(11);
         buku2.tampilInformasi();
+        // membuat objek baru dengan constructor
+        Buku15 bukuMuhamadSyaifullah = new Buku15(
+            "Pemrograman Berbasis Objek", 
+            "Muhamad Syaifullah", 
+            400, 
+            10, 
+            100000);
     }
 }
