@@ -12,5 +12,9 @@ public class BukuMain {
         buku1.terjual(5);
         buku1.gantiHarga(60000);
         buku1.tampilInformasi();
+        // membuat objek baru dengan constructor
+        Buku15 buku2 = new Buku15("Self Reward","Maheera", 160, 29, 59000);
+        buku2.terjual(11);
+        buku2.tampilInformasi();
     }
 }
