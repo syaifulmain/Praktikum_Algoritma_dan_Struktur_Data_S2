@@ -14,7 +14,7 @@ public class Dragon15 {
         clearScreen();
         printPosition();
         System.out.print("Masukkan input a/s/d/w: ");
-        switch (scanner.nextLine()) {
+        switch (scanner.nextLine().toLowerCase()) {
             case "a" -> moveLeft(); // move left
             case "d" -> moveRight(); // move right
             case "w" -> moveUp(); // move up

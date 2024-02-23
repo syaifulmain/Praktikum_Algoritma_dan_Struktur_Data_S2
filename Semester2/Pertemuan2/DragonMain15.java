@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class DragonMain {
+public class DragonMain15 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int width = 10;
