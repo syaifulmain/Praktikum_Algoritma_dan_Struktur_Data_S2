@@ -1,12 +1,12 @@
 public class Buku15 {
     String judul, pengarang;
-    int halaman, stok, harga;
+    int halaman, stok, harga, terjual;
 
     Buku15 () {
 
     }
 
-    public Buku15(String judul, String pengarang, int halaman, int stok, int harga) {
+    Buku15(String judul, String pengarang, int halaman, int stok, int harga) {
         this.judul = judul;
         this.pengarang = pengarang;
         this.halaman = halaman;
@@ -24,7 +24,12 @@ public class Buku15 {
 
     void terjual (int jml) {
         if (stok < jml) System.out.println("Stok tidak cukup");
-        else stok -= jml;
+        else {
+            stok -= jml;
+            terjual += jml;
+            System.out.println("Berhasil terjual " + terjual + " buku");
+        }
+
     }
 
     void restok (int jml) {
@@ -33,5 +38,19 @@ public class Buku15 {
 
     void gantiHarga (int hrg) {
         harga = hrg;
+    }
+
+    int hitungHargaTotal () {
+        return terjual * harga;
+    }
+
+    int hitungDiskon() {
+        if (hitungHargaTotal() > 150000) return 12;
+        else if (hitungHargaTotal() >= 75000) return 5;
+        else return 0;
+    }
+
+    int hitungHargaBayar() {
+        return hitungHargaTotal() * (100 - hitungDiskon()) / 100;
     }
 }
