@@ -10,7 +10,7 @@ public class Dragon15 {
         this.scanner =  Scanner;
     }
 
-    void move () {
+    void play () {
         clearScreen();
         printPosition();
         System.out.print("Masukkan input a/s/d/w: ");
