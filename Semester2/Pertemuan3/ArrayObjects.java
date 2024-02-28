@@ -1,21 +1,45 @@
+import java.util.Scanner;
+
 public class ArrayObjects {
     public static void main(String[] args) {
-        PersegiPanjang[] ppArray = new PersegiPanjang[3];
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("Masukan jumlah persegi panjang: ");
+        PersegiPanjang[] ppArray = new PersegiPanjang[input.nextInt()];
+    
+        for (int i = 0; i < ppArray.length; i++) {
+            ppArray[i] = new PersegiPanjang();
+            ppArray[0] = new PersegiPanjang();
+            System.out.println("Persegi Panjang ke-" + i);
+            System.out.print("Masukan Panjang: ");
+            ppArray[i].panjang = input.nextInt();
+            System.out.print("Masukan Lebar: ");
+            ppArray[i].lebar = input.nextInt();
+        }
 
-        ppArray[0] = new PersegiPanjang();
-        ppArray[0].panjang = 110;
-        ppArray[0].lebar = 30;
+        for (int i = 0; i < ppArray.length; i++) {
+            System.out.println("Persegi Panjang ke-" + i);
+            System.out.println("Panjang: " + ppArray[i].panjang + ", Lebar: " + ppArray[i].lebar);
+        }
 
-        ppArray[1] = new PersegiPanjang();
-        ppArray[1].panjang = 80;
-        ppArray[1].lebar = 40;
+        PersegiPanjang[][] ppArray2D = new PersegiPanjang[2][2];
 
-        ppArray[2] = new PersegiPanjang();
-        ppArray[2].panjang = 100;
-        ppArray[2].lebar = 20;
+        for (int i = 0; i < ppArray2D.length; i++) {
+            for (int j = 0; j < ppArray2D[i].length; j++) {
+                ppArray2D[i][j] = new PersegiPanjang();
+                System.out.println("Persegi Panjang ke-" + i + "," + j);
+                System.out.print("Masukan Panjang: ");
+                ppArray2D[i][j].panjang = input.nextInt();
+                System.out.print("Masukan Lebar: ");
+                ppArray2D[i][j].lebar = input.nextInt();
+            }
+        }
 
-        System.out.println("Persegi Panjang ke-0, panjang: " + ppArray[0].panjang + ", lebar: " + ppArray[0].lebar);
-        System.out.println("Persegi Panjang ke-1, panjang: " + ppArray[1].panjang + ", lebar: " + ppArray[1].lebar);
-        System.out.println("Persegi Panjang ke-2, panjang: " + ppArray[2].panjang + ", lebar: " + ppArray[2].lebar);
+        for (int i = 0; i < ppArray2D.length; i++) {
+            for (int j = 0; j < ppArray2D.length; j++) {
+                System.out.println("Persegi Panjang ke-" + i + "," + j);
+                System.out.println("Panjang: " + ppArray2D[i][j].panjang + ", Lebar: " + ppArray2D[i][j].lebar);
+            }
+        }
     }
 }
