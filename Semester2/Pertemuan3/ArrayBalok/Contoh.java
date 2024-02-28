@@ -38,5 +38,4 @@ class InnerContoh {
         this.b = b;
         this.d = d;
     }
-    
 }
