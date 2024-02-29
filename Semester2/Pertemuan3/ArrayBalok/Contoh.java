@@ -30,12 +30,12 @@ class InnerContoh {
     }
 
     // Meski memiliki tugas yang berbeda, terdeteksi error karena memiliki tipe data parameter yang sama
-    public InnerContoh(String a, int c) {
-        this.a = a;
-        this.c = c;
-    }
-    public InnerContoh(String b, int d) {
-        this.b = b;
-        this.d = d;
-    }
+//    public InnerContoh(String a, int c) {
+//        this.a = a;
+//        this.c = c;
+//    }
+//    public InnerContoh(String b, int d) {
+//        this.b = b;
+//        this.d = d;
+//    }
 }
