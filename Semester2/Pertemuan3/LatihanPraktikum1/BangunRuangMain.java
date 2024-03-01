@@ -11,7 +11,7 @@ public class BangunRuangMain {
         bola[] bola = new bola[bangunRuang];
 
         for (int i = 0; i < bangunRuang; i++) {
-            System.out.println("Kerucut ke-" + i);
+            System.out.println("Kerucut ke-" + (i + 1));
             System.out.print("Jari-jari : ");
             double jariJari = sc.nextDouble();
             System.out.print("Sisi miring : ");
@@ -20,7 +20,7 @@ public class BangunRuangMain {
         }
 
         for (int i = 0; i < bangunRuang; i++) {
-            System.out.println("Limas ke-" + i);
+            System.out.println("Limas ke-" + (i + 1));
             System.out.print("Sisi alas : ");
             double sisiAlas = sc.nextDouble();
             System.out.print("Tinggi : ");
@@ -29,26 +29,26 @@ public class BangunRuangMain {
         }
 
         for (int i = 0; i < bangunRuang; i++) {
-            System.out.println("Bola ke-" + i);
+            System.out.println("Bola ke-" + (i + 1));
             System.out.print("Jari-jari : ");
             double jariJari = sc.nextDouble();
             bola[i] = new bola(jariJari);
         }
 
         for (int i = 0; i < bangunRuang; i++) {
-            System.out.println("Kerucut ke-" + i);
+            System.out.println("Kerucut ke-" + (i + 1));
             System.out.println("Volume : " + kerucut[i].hitungVolume());
             System.out.println("Luas permukaan : " + kerucut[i].hitungLuasPermukaan());
         }
 
         for (int i = 0; i < bangunRuang; i++) {
-            System.out.println("Limas ke-" + i);
+            System.out.println("Limas ke-" + (i + 1));
             System.out.println("Volume : " + limas[i].hitungVolume());
             System.out.println("Luas permukaan : " + limas[i].hitungLuasPermukaan());
         }
 
         for (int i = 0; i < bangunRuang; i++) {
-            System.out.println("Bola ke-" + i);
+            System.out.println("Bola ke-" + (i + 1));
             System.out.println("Volume : " + bola[i].hitungVolume());
             System.out.println("Luas permukaan : " + bola[i].hitungLuasPermukaan());
         }
