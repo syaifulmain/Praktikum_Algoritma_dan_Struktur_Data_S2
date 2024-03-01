@@ -26,5 +26,25 @@ public class Mahasiswa15Main {
             System.out.println("Jenis Kelamin: " + mhs[i].jenisKelamin);
             System.out.println("Niali IPK: " + mhs[i].ipk);
         }
+        cariIpkTertinggi(mhs);
+        hitungRataRataIpk(mhs);
+    }
+
+    static void hitungRataRataIpk(Mahasiswa15[] mhs) {
+        float total = 0;
+        for (int i = 0; i < mhs.length; i++) {
+            total += mhs[i].ipk;
+        }
+        System.out.println("Rata-rata IPK: " + total / mhs.length);
+    }
+
+    static void cariIpkTertinggi(Mahasiswa15[] mhs) {
+        float ipkTertinggi = 0;
+        for (int i = 0; i < mhs.length; i++) {
+            if (mhs[i].ipk > ipkTertinggi) {
+                ipkTertinggi = mhs[i].ipk;
+            }
+        }
+        System.out.println("IPK Tertinggi: " + ipkTertinggi);
     }
 }
