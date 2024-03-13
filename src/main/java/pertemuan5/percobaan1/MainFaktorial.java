@@ -2,7 +2,7 @@ package pertemuan5.percobaan1;
 
 import java.util.Scanner;
 
-public class FaktorialMain {
+public class MainFaktorial {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Masukan Jumlah Element : ");
