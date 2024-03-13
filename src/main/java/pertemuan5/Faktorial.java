@@ -24,7 +24,7 @@ public class Faktorial {
         }
         System.out.println("HASIL FAKTORIAL BRUTE FORCE");
         for (int i = 0; i < e; i++) {
-            System.out.println("Hasil Faktorial Menggunakan Brute Force Adalah : " + faktorial[i].faktorialBF(faktorial[i].getNilai()));
+            System.out.println("Hasil Faktorial Menggunakan Brute Force Adalah : " + faktorial[i].faktorialBF1(faktorial[i].getNilai()));
         }
         System.out.println("HASIL FAKTORIAL DIVIDE AND CONQUER");
         for (int i = 0; i < e; i++) {
@@ -32,10 +32,35 @@ public class Faktorial {
         }
     }
 
-    int faktorialBF(int n) {
+    // Faktorial Brute Force for
+    int faktorialBF1(int n) {
         int fakto = 1;
         for (int i = 1; i <= n; i++) {
             fakto *= i;
+        }
+        return fakto;
+    }
+
+    // Faktorial Brute Force while
+    int faktorialBF2(int n) {
+        int fakto = 1;
+        int i = 1;
+        while (i <= n) {
+            fakto *= i;
+            i++;
+        }
+        return fakto;
+    }
+
+    // Faktorial Brute Force do while
+    int faktorialBF3(int n) {
+        int fakto = 1;
+        int i = 1;
+        if (n != 0) {
+            do {
+                fakto *= i;
+                i++;
+            } while (i <= n);
         }
         return fakto;
     }
