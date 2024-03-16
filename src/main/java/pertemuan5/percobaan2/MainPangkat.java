@@ -48,7 +48,7 @@ public class MainPangkat {
 
     static void pangkat(Pangkat[] pangkat, Pangkat.Metode metode) {
         System.out.println("==========================================");
-        System.out.println("HASIL PANGKAT " + metode.toString());
+        System.out.println("HASIL PANGKAT " + metode.toString().replaceAll("_", " "));
         for (Pangkat value : pangkat) {
             System.out.printf("Hasil dari %d pangakat %d adalah %d%n",
                     value.nilai,
