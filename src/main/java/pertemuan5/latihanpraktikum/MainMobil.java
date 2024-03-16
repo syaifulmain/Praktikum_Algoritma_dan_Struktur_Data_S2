@@ -11,7 +11,7 @@ public class MainMobil {
         System.out.println(mobil[indexMinAccelerationDC(mobil, 0, mobil.length - 1)]);
 
         System.out.println("====== Rata-rata Top Acceleration ======");
-        System.out.println(sumTopPowerBF(mobil));
+        System.out.println("Rata-rata : " + sumTopPowerBF(mobil));
     }
 
     static int indexMaxAccelerationDC(Mobil[] mobil, int left, int right) {
