@@ -5,16 +5,16 @@ public class MainMobil {
         Mobil[] mobil = new Mobil().getMobil();
 
         System.out.println("====== Tertinggi Top Acceleration ======");
-        System.out.println(mobil[new MainMobil().indexMaxAccelerationDC(mobil, 0, mobil.length - 1)]);
+        System.out.println(mobil[indexMaxAccelerationDC(mobil, 0, mobil.length - 1)]);
 
         System.out.println("====== Terendah Top Acceleration  ======");
-        System.out.println(mobil[new MainMobil().indexMinAccelerationDC(mobil, 0, mobil.length - 1)]);
+        System.out.println(mobil[indexMinAccelerationDC(mobil, 0, mobil.length - 1)]);
 
         System.out.println("====== Rata-rata Top Acceleration ======");
-        System.out.println(new MainMobil().sumTopPowerBF(mobil));
+        System.out.println(sumTopPowerBF(mobil));
     }
 
-    int indexMaxAccelerationDC(Mobil[] mobil, int left, int right) {
+    static int indexMaxAccelerationDC(Mobil[] mobil, int left, int right) {
         if (left == right) {
             return left;
         }
@@ -24,7 +24,7 @@ public class MainMobil {
         return mobil[leftIndex].getTopAcceleration() > mobil[rightIndex].getTopAcceleration() ? leftIndex : rightIndex;
     }
 
-    int indexMinAccelerationDC(Mobil[] mobil, int left, int right) {
+    static int indexMinAccelerationDC(Mobil[] mobil, int left, int right) {
         if (left == right) {
             return left;
         }
@@ -34,7 +34,7 @@ public class MainMobil {
         return mobil[leftIndex].getTopAcceleration() < mobil[rightIndex].getTopAcceleration() ? leftIndex : rightIndex;
     }
 
-    int sumTopPowerBF(Mobil[] mobil) {
+    static int sumTopPowerBF(Mobil[] mobil) {
         int sum = 0;
         for (Mobil m : mobil) {
             sum += m.getTopPower();
