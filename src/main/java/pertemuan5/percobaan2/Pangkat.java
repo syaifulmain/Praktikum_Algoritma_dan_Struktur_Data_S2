@@ -6,6 +6,10 @@ public class Pangkat {
      enum Metode {
         BRUTE_FORCE, DIVIDE_AND_CONQUER
     }
+
+    public Pangkat() {
+    }
+
     public Pangkat(int nilai, int pangkat) {
         this.nilai = nilai;
         this.pangkat = pangkat;
