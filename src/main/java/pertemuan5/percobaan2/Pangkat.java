@@ -4,8 +4,18 @@ public class Pangkat {
     public int nilai, pangkat;
 
      enum Metode {
-        BRUTE_FORCE, DIVIDE_AND_CONQUER
-    }
+        BF("BRUTE FORCE"),
+        DC("DIVIDE AND CONQUER");
+        private String name;
+
+         Metode(String name) {
+             this.name = name;
+         }
+
+         public String getName() {
+             return name;
+         }
+     }
 
     public Pangkat() {
     }

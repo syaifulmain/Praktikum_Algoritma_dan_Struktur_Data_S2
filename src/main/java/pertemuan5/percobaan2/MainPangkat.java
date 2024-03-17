@@ -27,8 +27,8 @@ public class MainPangkat {
             String temp = scanner.next();
             pilihan = (temp.matches("[1-3]") ? Integer.parseInt(temp) : 0);
             switch (pilihan) {
-                case 1 -> pangkat(pangkat, Pangkat.Metode.BRUTE_FORCE);
-                case 2 -> pangkat(pangkat, Pangkat.Metode.DIVIDE_AND_CONQUER);
+                case 1 -> pangkat(pangkat, Pangkat.Metode.BF);
+                case 2 -> pangkat(pangkat, Pangkat.Metode.DC);
             }
         } while (pilihan != 3);
     }
@@ -48,12 +48,12 @@ public class MainPangkat {
 
     static void pangkat(Pangkat[] pangkat, Pangkat.Metode metode) {
         System.out.println("==========================================");
-        System.out.println("HASIL PANGKAT " + metode.toString().replaceAll("_", " "));
+        System.out.println("HASIL PANGKAT " + metode.getName());
         for (Pangkat value : pangkat) {
             System.out.printf("Hasil dari %d pangakat %d adalah %d%n",
                     value.nilai,
                     value.pangkat,
-                    (metode == Pangkat.Metode.BRUTE_FORCE ?
+                    (metode == Pangkat.Metode.BF ?
                             Pangkat.pangkatBF(value.nilai, value.pangkat) :
                             Pangkat.pangkatDC(value.nilai, value.pangkat)));
         }
