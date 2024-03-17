@@ -8,7 +8,7 @@ public class Pangkat {
         DC("DIVIDE AND CONQUER");
         private String name;
 
-         Metode(String name) {
+         private Metode(String name) {
              this.name = name;
          }
 
