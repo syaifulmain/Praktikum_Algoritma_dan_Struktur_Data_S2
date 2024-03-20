@@ -59,7 +59,7 @@ public class HotelServiceImpl implements HotelService{
         if (index == 1) {
             for (int i = 0; i < dataHotel.length - 1; i++) {
                 for (int j = 1; j < dataHotel.length - i; j++) {
-                    if (dataHotel[j].getHarga() > dataHotel[j - 1].getHarga()) {
+                    if (dataHotel[j].getHarga() < dataHotel[j - 1].getHarga()) {
                         Hotel temp = dataHotel[j];
                         dataHotel[j] = dataHotel[j - 1];
                         dataHotel[j - 1] = temp;
@@ -87,7 +87,7 @@ public class HotelServiceImpl implements HotelService{
             for (int i = 1; i < dataHotel.length; i++) {
                 Hotel temp = dataHotel[i];
                 int j = i;
-                while (j > 0 && dataHotel[j - 1].getHarga() < temp.getHarga()) {
+                while (j > 0 && dataHotel[j - 1].getHarga() > temp.getHarga()) {
                     dataHotel[j] = dataHotel[j - 1];
                     j--;
                 }
