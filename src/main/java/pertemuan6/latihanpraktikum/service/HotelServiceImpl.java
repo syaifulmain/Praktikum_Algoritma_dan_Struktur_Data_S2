@@ -16,7 +16,7 @@ public class HotelServiceImpl implements HotelService{
 
     @Override
     public Hotel[] getAllHotel() {
-        return dataHotel;
+        return dataHotel.clone();
     }
 
     @Override

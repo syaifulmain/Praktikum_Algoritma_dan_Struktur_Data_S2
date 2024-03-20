@@ -40,7 +40,7 @@ public class HotelView {
         System.out.println("1. Data Asli");
         System.out.println("2. Urutkan Menggunakan Bubble Sort");
         System.out.println("3. Urutkan Menggunakan Selection Sort");
-        Hotel[] dataHotel = hotelService.getAllHotel().clone();
+        Hotel[] dataHotel = hotelService.getAllHotel();
         int pilihan = scannerUtil.inputInt("Pilihan: ");
         switch (pilihan) {
             case 1 -> hotelService.tampilAll(dataHotel);
