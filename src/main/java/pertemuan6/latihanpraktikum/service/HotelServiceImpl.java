@@ -9,7 +9,7 @@ public class HotelServiceImpl implements HotelService{
     public HotelServiceImpl() {
         dataHotel[0] = new Hotel("Hotel A", "Jakarta", 1000000, (byte) 5);
         dataHotel[1] = new Hotel("Hotel B", "Bandung", 500000, (byte) 4);
-        dataHotel[2] = new Hotel("Hotel C", "Surabaya", 300000, (byte) 3);
+        dataHotel[2] = new Hotel("Hotel C", "Surabaya", 800000, (byte) 3);
         dataHotel[3] = new Hotel("Hotel D", "Malang", 200000, (byte) 2);
         dataHotel[4] = new Hotel("Hotel E", "Bali", 1500000, (byte) 5);
     }
@@ -39,9 +39,9 @@ public class HotelServiceImpl implements HotelService{
             if (dataHotel[i] != null) {
                 System.out.printf(main,
                         i+1,
-                        dataHotel[i].getNama(),
-                        dataHotel[i].getKota(),
-                        String.valueOf(dataHotel[i].getHarga()).replaceAll("\\B(?=(\\d{3})+(?!\\d))", "."),
+                        (dataHotel[i].getNama().length() > 15) ? dataHotel[i].getNama().substring(0, 15) : dataHotel[i].getNama(),
+                        (dataHotel[i].getKota().length() > 10) ? dataHotel[i].getKota().substring(0, 10) : dataHotel[i].getKota(),
+                        String.valueOf((dataHotel[i].getHarga() < 100_000_000) ? dataHotel[i].getHarga() : 99_999_999).replaceAll("\\B(?=(\\d{3})+(?!\\d))", "."),
                         "*".repeat(dataHotel[i].getBintang()));
                 System.out.println();
             }
