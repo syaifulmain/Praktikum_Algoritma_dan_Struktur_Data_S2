@@ -29,10 +29,10 @@ public class HotelView {
 
     private void tambahHotelView() {
         System.out.println("Tambah Hotel");
-        String nama = scannerUtil.inputString("Nama Hotel: ");
-        String kota = scannerUtil.inputString("Kota: ");
-        int harga = scannerUtil.inputInt("Harga: ");
-        byte bintang = scannerUtil.inputByte("Bintang(1-5): ");
+        String nama = scannerUtil.inputString("Nama Hotel\t: ");
+        String kota = scannerUtil.inputString("Kota\t\t: ");
+        int harga = scannerUtil.inputInt("Harga\t\t: ");
+        byte bintang = scannerUtil.inputByte("Bintang(1-5)\t: ");
         hotelService.tambahHotel(new Hotel(nama, kota, harga, bintang));
     }
 
@@ -46,8 +46,8 @@ public class HotelView {
             case 1 -> hotelService.tampilAll(dataHotel);
             case 2 -> {
                 System.out.println("Urutkan berdasarkan: ");
-                System.out.println("1. Harga");
-                System.out.println("2. Bintang");
+                System.out.println("1. Harga Termurah");
+                System.out.println("2. Bintang Tertinggi");
                 pilihan = scannerUtil.inputInt("Pilihan: ");
                 switch (pilihan) {
                     case 1 -> hotelService.bubbleSort(dataHotel, 1);
@@ -57,8 +57,8 @@ public class HotelView {
             }
             case 3 -> {
                 System.out.println("Urutkan berdasarkan: ");
-                System.out.println("1. Harga");
-                System.out.println("2. Bintang");
+                System.out.println("1. Harga Termurah");
+                System.out.println("2. Bintang Tertinggi");
                 pilihan = scannerUtil.inputInt("Pilihan: ");
                 switch (pilihan) {
                     case 1 -> hotelService.selectionSort(dataHotel, 1);
