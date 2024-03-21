@@ -16,7 +16,8 @@ public class ScannerUtil {
 
     public int inputInt(String message) {
         String temp = inputString(message);
-        return (temp.matches("[0-9]+")) ? Integer.parseInt(temp) : 0;
+        long tempInt = (temp.matches("[0-9]+")) ? Long.parseLong(temp) : 0;
+        return (tempInt < 100_000_000) ? (int) tempInt : 99_999_999;
     }
 
     public Byte inputByte(String message) {
