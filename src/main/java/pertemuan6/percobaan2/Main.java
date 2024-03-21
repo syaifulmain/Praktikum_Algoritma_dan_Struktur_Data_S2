@@ -19,7 +19,7 @@ public class Main {
         list.tampil();
 
         System.out.println("Data Mahasiswa setelah sorting desc berdasarkan IPK : ");
-        list.insertionSort();
+        list.selectionSort();
         list.tampil();
     }
 }

@@ -19,15 +19,17 @@ public class DaftarMahasiswaBerprestasi {
         }
     }
 
-    void insertionSort() {
-        for (int i = 1; i < listMhs.length; i++) {
-            Mahasiswa temp = listMhs[i];
-            int j = i;
-            while (j > 0 && listMhs[j - 1].getIpk() < temp.getIpk()) {
-                listMhs[j] = listMhs[j - 1];
-                j--;
+    void selectionSort() {
+        for (int i = 0; i < listMhs.length - 1; i++) {
+            int indexMin = i;
+            for (int j = i + 1; j < listMhs.length; j++) {
+                if (listMhs[j].getIpk() < listMhs[indexMin].getIpk()) {
+                    indexMin = j;
+                }
             }
-            listMhs[j] = temp;
+            Mahasiswa temp = listMhs[indexMin];
+            listMhs[indexMin] = listMhs[i];
+            listMhs[i] = temp;
         }
     }
 }
