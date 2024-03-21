@@ -22,12 +22,7 @@ public class HotelServiceImpl implements HotelService{
     @Override
     public void tambahHotel(Hotel hotel) {
         dataHotel = Arrays.copyOf(dataHotel, dataHotel.length + 1);
-        for (int i = 0; i < dataHotel.length; i++) {
-            if (dataHotel[i] == null) {
-                dataHotel[i] = hotel;
-                break;
-            }
-        }
+        dataHotel[dataHotel.length - 1] = hotel;
     }
 
     @Override
