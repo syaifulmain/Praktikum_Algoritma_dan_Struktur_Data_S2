@@ -48,7 +48,6 @@ public class PencarianBuku15 {
 
     public int findBinarySearch(int cari, int left, int right, SortBy sortBy) {
         int mid;
-
         if (right >= left) {
             mid = (left + right) / 2;
             if (listBuku[mid].kodeBuku == cari) {
