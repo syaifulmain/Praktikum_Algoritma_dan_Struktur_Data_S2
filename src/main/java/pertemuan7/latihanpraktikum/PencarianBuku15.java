@@ -90,6 +90,9 @@ public class PencarianBuku15 {
                 dupe = Arrays.copyOf(dupe, dupe.length + 1);
                 dupe[dupe.length - 1] = i;
             }
+            if (dupe.length > 1 && !listBuku[i].equals(check, sortBy)) {
+                break;
+            }
         }
         return dupe;
     }
