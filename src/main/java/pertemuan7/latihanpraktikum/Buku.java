@@ -61,4 +61,13 @@ public class Buku {
         }
         return false;
     }
+
+    public boolean equals(Buku buku, SortBy sortBy) {
+        if (sortBy == SortBy.KODE_BUKU) {
+            return this.getKodeBukuToLower().equals(buku.getKodeBukuToLower());
+        } else if (sortBy == SortBy.JUDUL) {
+            return this.getJudulToLower().equals(buku.getJudulToLower());
+        }
+        return false;
+    }
 }
