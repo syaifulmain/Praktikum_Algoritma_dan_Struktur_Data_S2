@@ -61,8 +61,6 @@ public class Postfix15 {
             }
             if (isOperator(c)) {
                 while (derajat(stack[top]) >= derajat(c)) {
-                    System.out.println(derajat(stack[top]));
-                    System.out.println(derajat(c));
                     P = P + pop();
                 }
                 push(c);
