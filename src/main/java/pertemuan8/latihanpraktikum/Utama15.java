@@ -58,24 +58,10 @@ public class Utama15 {
 
                     switch (pilihanCari) {
                         case 1 -> {
-                            System.out.print("Masukan Kode Barang : ");
-                            int kode = Integer.parseInt(scanner.nextLine());
-                            Barang15 barang = gudang.cariBarang(kode, "kode");
-                            if (barang != null) {
-                                System.out.println("Barang ditemukan : " + barang.nama);
-                            } else {
-                                System.out.println("Barang tidak ditemukan");
-                            }
+                            cariBarang(gudang, "kode");
                         }
                         case 2 -> {
-                            System.out.print("Masukan Nama Barang : ");
-                            String nama = scanner.nextLine();
-                            Barang15 barang = gudang.cariBarang(nama, "nama");
-                            if (barang != null) {
-                                System.out.println("Barang ditemukan : " + barang.nama);
-                            } else {
-                                System.out.println("Barang tidak ditemukan");
-                            }
+                            cariBarang(gudang, "nama");
                         }
                         default -> {
                             System.out.println("Pilihan tidak valid, silakan coba lagi");
@@ -88,5 +74,16 @@ public class Utama15 {
             }
             System.out.println();
         } while (true);
+    }
+
+    static void cariBarang(Gudang15 gudang, String by) {
+        System.out.print("Masukan " + by + " Barang : ");
+        String cari = scanner.nextLine();
+        Barang15 barang = gudang.cariBarang(cari, by);
+        if (barang != null) {
+            System.out.println("Barang ditemukan : " + barang.nama);
+        } else {
+            System.out.println("Barang tidak ditemukan");
+        }
     }
 }
