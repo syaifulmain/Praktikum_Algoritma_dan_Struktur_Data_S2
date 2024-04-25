@@ -18,23 +18,25 @@ public class QueueMain {
                 case 2 -> dequeue(queue);
                 case 3 -> queue.print();
                 case 4 -> queue.peek();
-                case 5 -> queue.clear();
-                case 6 -> queue.peekRear();
+                case 5 -> queue.peekRear();
+                case 6 -> peekPosition(queue);
                 case 7 -> queue.daftarPembeli();
+                case 8 -> queue.clear();
             }
-        } while (pilih != 8);
+        } while (pilih != 9);
     }
 
     static void menu() {
         System.out.println("Masukan operasi yang diinginkan:");
-        System.out.println("1. Enqueue");
-        System.out.println("2. Dequeue");
-        System.out.println("3. Print");
-        System.out.println("4. Peek");
-        System.out.println("5. Clear");
-        System.out.println("6. Peek Rear");
-        System.out.println("7. Dafatar Pembeli");
-        System.out.println("8. Keluar");
+        System.out.println("1. Antrian Baru");
+        System.out.println("2. Antrian Keluar");
+        System.out.println("3. Cek Semua Antrian");
+        System.out.println("4. Cek Antrian Paling Depan");
+        System.out.println("5. Cek Antrian Paling Belakang");
+        System.out.println("6. Cek Antrian Berdasarkan Nama");
+        System.out.println("7. Daftar Pembeli");
+        System.out.println("8. Hapus Semua Antrian");
+        System.out.println("9. Keluar");
         System.out.println("--------------------");
     }
 
@@ -52,6 +54,11 @@ public class QueueMain {
             System.out.println("Data yang dikeluarkan: ");
             System.out.println(dataOut);
         }
+    }
+
+    static void peekPosition(Queue queue) {
+        String nama = input("Nama");
+        queue.peekPosition(nama);
     }
 
     static String input(String message) {
