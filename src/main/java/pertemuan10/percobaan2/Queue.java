@@ -99,4 +99,12 @@ public class Queue {
             System.out.println("Queue berhasil dikosongkan");
         }
     }
+
+    public void peekRear() {
+        if (isEmpty()) {
+            System.out.println("Antrian masih kosong");
+        } else {
+            System.out.println("Elemen terbelakang: " + data[rear]);
+        }
+    }
 }

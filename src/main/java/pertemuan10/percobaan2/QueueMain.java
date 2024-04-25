@@ -18,6 +18,7 @@ public class QueueMain {
                 case 2 -> dequeue(queue);
                 case 3 -> queue.peek();
                 case 4 -> queue.print();
+                case 5 -> queue.peekRear();
             }
         } while (pilih != 6);
     }
@@ -28,7 +29,8 @@ public class QueueMain {
         System.out.println("2. Antrian Keluar");
         System.out.println("3. Cek Antrian Terdepan");
         System.out.println("4. Cek Semua Antrian");
-        System.out.println("5. Keluar");
+        System.out.println("5. Cek Antrian Paling Belakang");
+        System.out.println("6. Keluar");
         System.out.println("--------------------");
     }
 
