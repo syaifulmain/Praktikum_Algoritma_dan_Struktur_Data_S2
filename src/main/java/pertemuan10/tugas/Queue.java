@@ -74,7 +74,7 @@ public class Queue {
         if (isEmpty()) {
             System.out.println("Antrian masih kosong");
         } else {
-            System.out.println("Elemen terdepan: " + data[front]);
+            System.out.println("Elemen terdepan: \n" + data[front]);
         }
     }
 
@@ -106,7 +106,7 @@ public class Queue {
         if (isEmpty()) {
             System.out.println("Antrian masih kosong");
         } else {
-            System.out.println("Elemen terbelakang: " + data[rear]);
+            System.out.println("Elemen terbelakang: \n" + data[rear]);
         }
     }
 
