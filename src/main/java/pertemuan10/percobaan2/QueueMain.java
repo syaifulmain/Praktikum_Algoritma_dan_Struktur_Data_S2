@@ -16,21 +16,19 @@ public class QueueMain {
             switch (pilih) {
                 case 1 -> enqueue(queue);
                 case 2 -> dequeue(queue);
-                case 3 -> queue.print();
-                case 4 -> queue.peek();
-                case 5 -> queue.clear();
+                case 3 -> queue.peek();
+                case 4 -> queue.print();
             }
         } while (pilih != 6);
     }
 
     static void menu() {
         System.out.println("Masukan operasi yang diinginkan:");
-        System.out.println("1. Enqueue");
-        System.out.println("2. Dequeue");
-        System.out.println("3. Print");
-        System.out.println("4. Peek");
-        System.out.println("5. Clear");
-        System.out.println("6. Keluar");
+        System.out.println("1. Antrian Baru");
+        System.out.println("2. Antrian Keluar");
+        System.out.println("3. Cek Antrian Terdepan");
+        System.out.println("4. Cek Semua Antrian");
+        System.out.println("5. Keluar");
         System.out.println("--------------------");
     }
 
