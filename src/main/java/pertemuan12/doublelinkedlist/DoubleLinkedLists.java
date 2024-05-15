@@ -1,5 +1,7 @@
 package pertemuan12.doublelinkedlist;
 
+import java.util.Comparator;
+
 public class DoubleLinkedLists<E> {
     Node<E> head;
     int size;
@@ -166,5 +168,27 @@ public class DoubleLinkedLists<E> {
             tmp = tmp.next;
         }
         return dll;
+    }
+
+    public void sort(Comparator<? super E> c) {
+        Node<E> current = head;
+        Node<E> index = null;
+        E temp;
+        if (head == null) {
+            return;
+        } else {
+            while (current != null) {
+                index = current.next;
+                while (index != null) {
+                    if (c.compare(current.data, index.data) > 0) {
+                        temp = current.data;
+                        current.data = index.data;
+                        index.data = temp;
+                    }
+                    index = index.next;
+                }
+                current = current.next;
+            }
+        }
     }
 }
