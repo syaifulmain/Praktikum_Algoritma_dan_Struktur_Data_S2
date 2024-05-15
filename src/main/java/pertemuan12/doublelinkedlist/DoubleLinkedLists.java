@@ -1,6 +1,7 @@
 package pertemuan12.doublelinkedlist;
 
 import java.util.Comparator;
+import java.util.function.Consumer;
 
 public class DoubleLinkedLists<E> {
     Node<E> head;
@@ -189,6 +190,14 @@ public class DoubleLinkedLists<E> {
                 }
                 current = current.next;
             }
+        }
+    }
+
+    public void forEach (Consumer<? super E> action) {
+        Node<E> tmp = head;
+        while (tmp != null) {
+            action.accept(tmp.data);
+            tmp = tmp.next;
         }
     }
 }
