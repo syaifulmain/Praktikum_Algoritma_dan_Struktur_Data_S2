@@ -58,8 +58,8 @@ public class DoubleLinkedLists {
                 Node newNode = new Node(current.prev, item, current);
                 newNode.prev = current.prev;
                 newNode.next = current;
-                newNode.prev.next = newNode;
-                newNode.next.prev = newNode;
+                current.prev.next = newNode;
+                current.prev = newNode;
             }
         }
         size++;
