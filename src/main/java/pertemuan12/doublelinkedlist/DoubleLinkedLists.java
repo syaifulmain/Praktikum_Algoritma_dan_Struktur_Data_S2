@@ -200,4 +200,15 @@ public class DoubleLinkedLists<E> {
             tmp = tmp.next;
         }
     }
+
+    public E search(E key, Comparator<? super E> c) {
+        Node<E> tmp = head;
+        while (tmp != null) {
+            if (c.compare(tmp.data, key) == 0) {
+                return tmp.data;
+            }
+            tmp = tmp.next;
+        }
+        return null;
+    }
 }
