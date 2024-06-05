@@ -29,5 +29,29 @@ public class GraphMatriks15 {
         }
     }
 
+    public int outDegree(int v) {
+        int degree = 0;
+        for (int i = 0; i < vertex; i++) {
+            if (matriks[v][i] != 0) {
+                degree++;
+            }
+        }
+        return degree;
+    }
 
+    public int inDegree(int v) {
+        int degree = 0;
+        for (int i = 0; i < vertex; i++) {
+            if (matriks[i][v] != 0) {
+                degree++;
+            }
+        }
+        return degree;
+    }
+
+    public void printDegrees() {
+        for (int i = 0; i < vertex; i++) {
+            System.out.println("Gedung " + (char) ('A' + i) + " - OutDegree: " + outDegree(i) + ", InDegree: " + inDegree(i));
+        }
+    }
 }
