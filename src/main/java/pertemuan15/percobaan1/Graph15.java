@@ -63,4 +63,14 @@ public class Graph15 {
         }
         System.out.println();
     }
+
+    public void check(int asal, int tujuan) {
+        for (int i = 0; i < list[asal].size(); i++) {
+            if (list[asal].get(i) == tujuan) {
+                System.out.println("Gedung " + (char) ('A' + asal) + " dan " + (char) ('A' + tujuan) + " bertetangga");
+                return;
+            }
+        }
+        System.out.println("Gedung " + (char) ('A' + asal) + " dan " + (char) ('A' + tujuan) + " tidak bertetangga");
+    }
 }
